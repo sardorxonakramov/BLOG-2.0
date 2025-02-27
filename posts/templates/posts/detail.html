@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Posts Detail</h1>
+    <ul>
+            <li>
+                <h3>{{ post.title }}</h3>
+            </li>
+            <li>
+                <h4>
+                    {{ post.subtitle}}
+                </h4>
+            </li>
+            <li>
+              <img src="{{ post.image.url }}" alt="{{ post.title }}" style="width: 300px; height: auto;">
+
+                {{ post.image.url }}
+            </li>
+            <li>
+                <p>{{ post.content }}</p>
+            </li>
+            <li>
+                <p>{{ post.author.first_name }}</p>
+                <p> {{ post.updated_at }}</p>
+            </li>
+    </ul>
+    <a href="{% url 'home' %}">Back to all posts</a>
+    {% endblock content %}
+    <!-- <a href="{% url 'posts:create' %}">Create a new post</a> -->

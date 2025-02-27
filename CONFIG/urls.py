@@ -8,7 +8,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('account/', include('account.urls')),
     # path('account/', include('django.contrib.auth.urls')),
-    path("", lambda request: HttpResponse("Hello, World!"), name="home"),
+    # path("", lambda request: HttpResponse("Hello, World!"), name="home"),
+    path('', include('posts.urls')),
 ]
 
 if settings.DEBUG:

@@ -1,3 +1,9 @@
+{% load static %}
+{% block extrahead %}
+<script>window.CKEDITOR_BASEPATH = '/static/ckeditor/ckeditor/';</script>
+{{ block.super }}
+{% endblock %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

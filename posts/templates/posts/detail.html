@@ -19,10 +19,12 @@
                 <p>{{ post.content }}</p>
             </li>
             <li>
-                <p>{{ post.author.first_name }}</p>
+                <p>{{ post.author.fullname }}</p>
                 <p> {{ post.updated_at }}</p>
             </li>
     </ul>
+    <a href="{% url 'post_update' post.id %}">Edit this post</a>
+    <a href="{% url 'post_delete' post.id %}">Delete this post</a>
     <a href="{% url 'home' %}">Back to all posts</a>
     {% endblock content %}
     <!-- <a href="{% url 'posts:create' %}">Create a new post</a> -->

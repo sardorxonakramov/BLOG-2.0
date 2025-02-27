@@ -33,7 +33,7 @@ Thumbs.db
 venv/
 env/
 *.env/
-
+.venv/
 # Django migrations
 migrations/
 

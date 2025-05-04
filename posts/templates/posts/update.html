@@ -1,13 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>Update Post</h2>
-<form method="post" action="" enctype="multipart/form-data">
-    {% csrf_token %}
+<div class="container mt-5" style="max-width: 600px;">
+    <h2 class="mb-4">Update Post</h2>
 
-    {{ form.media }}
-    {{ form.as_p }}
-    <button type="submit">Update</button>
-</form>
+    <form method="post" action="" enctype="multipart/form-data" class="border p-4 rounded shadow-sm bg-light">
+        {% csrf_token %}
+        {{ form.media }}
+        {{ form.as_p }}
 
+        <button type="submit" class="btn btn-success mt-3">Update</button>
+        <a href="{% url 'home' %}" class="btn btn-secondary mt-3 ms-2">Cancel</a>
+    </form>
+</div>
 {% endblock content %}

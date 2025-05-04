@@ -1,3 +1,49 @@
+# Django Project Setup
+
+Follow these steps to set up and run the Django project locally.
+
+## 1. Create and Activate Virtual Environment
+
+Create a virtual environment to manage project dependencies.
+
+For **Mac/Linux**:
+
+```bash
+
+python3 -m venv .venv
+source .venv/bin/activate
+```
+----------
+windows
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+```
+
+```bash
+pip install -r requirements.txt
+python manage.py migrate
+
+python manage.py createsuperuser
+```
+
+```bash
+python manage.py runserver
+```
+
+---
+
+Bu **`README.md`** faylida loyiha o'rnatilishi va ishga tushirilishi uchun kerakli barcha qadamlar aniq ko'rsatilgan. Unga loyiha haqida qisqacha ma'lumot, talablarga muvofiq qadamlar va serverni ishga tushirish bo'yicha ko'rsatmalar ham kiritilgan.
+
+
+
+----------------------------
+
+
+
+
+
+
 # CKEditor 4 ni Django loyihasiga qo'shish
 
 Bu qo'llanma `django-ckeditor` kutubxonasidan foydalanib, `CKEditor 4` ni Django loyihasiga qanday integratsiya qilishni tushuntiradi.

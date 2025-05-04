@@ -1,12 +1,23 @@
 {% extends 'base.html' %}
+
 {% block content %}
-<form action="" method="POST">
-    {% csrf_token %}
-    {{ post.title }}
-    <br>
-    {{ post.subtitle }}
-    
-    <p style="color: red;">Are you sure you want to delete this post?</p>
-    <button type="submit">Delete</button>
-</form>
+<div class="container mt-5" style="max-width: 500px;">
+    <form action="" method="POST" class="border p-4 rounded bg-light shadow-sm">
+        {% csrf_token %}
+
+        <h4 class="mb-3">Delete Post</h4>
+
+        <div class="mb-2">
+            <strong>Title:</strong> {{ post.title }}
+        </div>
+        <div class="mb-3">
+            <strong>Subtitle:</strong> {{ post.subtitle }}
+        </div>
+
+        <p class="text-danger">Are you sure you want to delete this post?</p>
+
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a href="{% url 'home' %}" class="btn btn-secondary ms-2">Cancel</a>
+    </form>
+</div>
 {% endblock content %}
